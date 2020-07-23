@@ -1,0 +1,17 @@
+Projekt FLP 2020
+Rubikova kocka
+Anton Firc (xfirca00)
+
+Preklad programu: make
+Spustenie programu: ./flp-20-log
+
+Program načíta kocku zo STDIN a vypíše na STDOUT postupne kroky vedúce k riešeniu.
+
+Porovnanie časov behu programu v závislosti na počte krokov:
+1 kroky = 0ms (čas behu menší než bolo možné zaznamenať)
+2 kroky = 0ms (čas behu menší než bolo možné zaznamenať)
+3 kroky = 5ms
+4 kroky = 69ms
+5 krokov = 822ms
+6 krokov = 10.624s
+7 krokov = 2.314m

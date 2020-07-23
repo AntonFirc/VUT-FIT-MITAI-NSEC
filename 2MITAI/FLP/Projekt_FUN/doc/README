@@ -1,0 +1,21 @@
+Projekt FLP 2020
+Funkcionální projekt plg-2-nka
+Anton Firc
+
+Prevod pravej lineárnej gramatiky na nedetrministický konečný automat.
+
+Spustenie:
+
+./plg-2-nka <-i|-1|-2> [filename]
+
+kde:
+ - prepínač -i => vypíše vstupnú gramatiku prevedenú do internej reprezentácie
+ - prepínač -1 => vypíše gramatiku upravenú podľa vety 3.2 z opory predmetu TIN*
+ - prepínač -2 => vypíše konečný automat prijímajúci rovnaký jazyk ako vstupná gramatika
+ - filename (nepovinné) => názov súboru obsahujúci vstupnú gramatiku vo formáte podľa zadania
+                        => pokiaľ nie je zadané, načítava zo STDIN
+
+Je možné použiť všetky prepínače (-i, -1, -2) naraz, v akomkoľvek poradí.
+Vstupný súbor MUSÍ byť zadaný ako posledný argument!
+
+ *opora predmetu TIN dostupna tu : http://www.fit.vutbr.cz/study/courses/TIN/public/Texty/TIN-studijni-text.pdf
