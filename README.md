@@ -1,4 +1,4 @@
-# FIT-MITAI-NSEC-Projects
+# FIT MITAI NSEC Projects
 My school projects repository. Cybersecurity FIT BUT.
 
 ## 1MITAI - Prvý semester
