@@ -1,5 +1,5 @@
 # FIT MITAI NSEC Projects
-My school projects repository. Cybersecurity FIT BUT.
+My school projects repository. Cybersecurity FIT VUT.
 
 ## 1MITAI - Prvý semester
 - AVS
