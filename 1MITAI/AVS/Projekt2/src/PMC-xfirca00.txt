@@ -1,0 +1,62 @@
+Architektury Výpočetních Systémů (AVS 2019)
+Projekt č. 2 (PMC)
+Login: xfirca00
+
+Úloha 1: Paralelizace původního řešení
+===============================================================================
+
+1) Kterou ze smyček (viz zadání) je vhodnější paralelizovat a co způsobuje 
+   neefektivitu paralelizaci té druhé?
+
+Vhodnejsie je paralelizovat smycku vo funkcii marchCubes.
+Pri paralelizacii smycky vo funkcii evaluateFieldAt sa prerozdeluje len maly vypocet medzi viac jadier. Zaroven sa musi cakat na vsetky procesy kym dopocitaju hodnotu co moze dokonca spomalit celu dobu vypoctu.
+
+2) Jaké plánování (rozdělení práce mezi vlákna) jste zvolili a proč? 
+   Jaký vliv má velikost "chunk" při dynamickém plánování (8, 16, 32, 64)?
+
+Zvolil som staticke planovanie, pretoze vypoctova narocnost kazdej iteracie je priblizne rovnaka.
+
+Chunk size pri dynamickom planovani priraduje pocet uloh jednotlivym vlaknam, cim vyssia hodnota tym viac uloh na jeden krat vlakno dostane. Pri pouziti vacsej hodnoty chunk-size sa implementacia spomaluje nakolko sa "preplnuju" vlakna a niektore vlakna zostavaju menej vytazene alebo nevytazene vobec.
+
+3) Jakým způsobem zajišťujete ukládání trojúhelníků z několika vláken současně?
+
+Pouzitim kritickej sekcie pri zapisovani suctu do premnennej totalTriangles. Kriticka sekcia zaisti vylucny pristup k premennej pri zapise.
+
+Úloha 2: Paralelní průchod stromem
+===============================================================================
+
+1) Stručně popište použití OpenMP tasků ve vašem řešení.
+
+Paralelizacia je spustena pred prvym volanim funkcie cutCube, ktora implementuje rozdelenie pomocoiu Octree. Pre volanie funkcie je pouzita pragma #pragma omp single, ktora zabezpeci aby bolo volanie funbkcie na uvodnej urovni vykonane len jednym jadrom. Nasledne funkcia pouziva 8 taskov, pre kadzu pod-kocku jeden. V tasku je vypocitany pociatocny bod kazdej pod-kocky, a rekurzivne volana funkcia cutCube. Pragma #pragma omp taskwait umiestnena pred koncom funkcie zabezpecuje aby rodicovske tasky cakali na svoje child tasky a nedochadzalo k strate dat medzi rekurzivnymi volaniami.
+
+2) Jakým způsobem jste realizovali sesbírání celkového počtu trojúhelníků?
+
+Pomocou rekurzie je volana funkcia cutCube, ktora na najnizsej urovni vola funckiu buildCube a vracia pocet najdenych trojuholnikov. Potom rodicovske funkcie spocitavaju navratene hodnoty spat az na uvodnu uroven odkial je vrateny celkovy pocet rojuholnikov.
+
+3) Jaký vliv má na vaše řešení tzv. "cut-off"? Je vhodné vytvářet nový 
+   task pro každou krychli na nejnižší úrovni?
+
+Cutoff nema ziadny vplyv na moje riesenie, nakolko je implicitne nastaveny podla zadanej velkosti mriezky(grid). Takze vzdy dojde k rozdeleniu mriezky az na najmensie kocky s velkostou hrany 1.
+Aj na najnizsej urovni je vhodne vytvarat tasky, dochadza tak k vypoctu trojuholnikov paralelne, jedine je treba osetrit pristup k polu mTriangles vo funkcii emitTriange pouzitim kritickej sekcie.
+
+4) Jakým způsobem zajišťujete ukládání trojúhelníků z několika vláken současně?
+
+Ukladanie trojuholnikov je zabezpecene pouzitim zdielanej premennej ktora prenasa vysledky z child taskov, a pri zapise do zdielanej premnennej je pouzita kriticka sekcia.
+
+Úloha 3: Grafy škálování obou řešení
+===============================================================================
+
+1) Stručně zhodnoťte efektivitu vytvořených řešení (na základě grafů škálování).
+
+Obom rieseniam raste casova narocnost so stuipajucim poctom spracovanych bodov. Pri nizsom pocte bodov (pod 2^14) vykazuje nizsiu casovu narocnost OPENMP loop, pri vyssich (nad 2^14), zase vykazuje Octree lepsiu (mensiu) casovu narocnost. Celkovo sa vsak obe riesenia javia ako priblizne rovnake, kedy aj pri pocte spracovanych bodov 2^26 dochadza k casovemu rozidielu cca 3minut, v prospech Octree algoritmu.
+
+2) V jakém případě (v závislosti na počtu bodů ve vstupním souboru a velikosti 
+   mřížky) bude vaše řešení 1. úlohy neefektivní? (pokud takový případ existuje)
+
+Pri velkom pocte vstupnych bodov na jadro a pouziti 16 jadier rapidne stupa casova narocnost a javi sa teda ako neefektivny.
+
+3) Je (nebo není) stromový algoritmus efektivnější z pohledu slabého škálování 
+   vzhledem ke vstupu?
+
+Stromovy algoritmus v porvanni s OpenMP Loop je efektivnejsi. V pripade pouzitia poctu jadier 8 alebo viac a maleho poctu vstupov na jadro (10), sa efektivitou priblizuju, dokonca moze byt OpenMP Loop efektivnejsi.
+
