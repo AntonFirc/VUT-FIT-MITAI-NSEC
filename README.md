@@ -24,3 +24,13 @@ My school projects repository. Cybersecurity FIT VUT.
 - PRL
   - Projekt 1 (Odd-Event Transposition sort) - 8/10
   - Projekt 2 (Visibility algorimus) - 8/10
+  
+  ## 3MITAI - Tretí semester
+- AIS
+  - Projekt - 20/29
+- GJA
+  - Projekt - 36/39
+- PDB
+  - Projekt (sociálna sieť) - 5/5 + 20/20
+- ZZN
+  - Projekt (databáze z výskumu konzumace alkoholu) - 5/5 + 29/29
