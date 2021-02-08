@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Demo page</title>
+    <style>
+        .col {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+
+<form target="_blank" class="col-md-6 col" id="messageSend" action="/chats/messages/send" method="post" enctype="multipart/form-data">
+    <label for="author">Author</label>
+    <input type="text" name="author" id="author">
+    <label for="receiver">Receiver</label>
+    <input type="text" name="receiver" id="receiver">
+    <label for="chatId">Chat id</label>
+    <input type="text" name="chatId" id="chatId">
+    <label for="content">Content</label>
+    <input type="text" name="content" id="content">
+    <button id="send1">Send</button>
+</form>
+
+<form target="_blank" class="col-md-6 col" id="groupCreate" action="/chats/groups/create" method="post" enctype="multipart/form-data">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name">
+    <button id="send2">Crete group</button>
+</form>
+
+<form target="_blank" class="col-md-6 col" id="groupAdd" action="/chats/groups/add" method="post" enctype="multipart/form-data">
+    <label for="email">User email</label>
+    <input type="text" name="email" id="email">
+    <label for="group">Group id</label>
+    <input type="text" name="group" id="group">
+    <button id="send3">Add user to group</button>
+</form>
+
+<script>
+    $('#send1').click(function(e) {
+        e.preventDefault();
+        var author = $("#author").val();
+        var receiver = $("#receiver").val();
+        var chatId = $("#chatId").val();
+        var content = $("#content").val();
+
+        var data = {
+            author: author,
+            receiver: receiver,
+            chatId: chatId,
+            content: content,
+        }
+
+        $.ajax({
+            method: 'post',
+            url: '/chats/messages/send',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: JSON.stringify(data)
+        }).done(function (result) {
+            console.log(result);
+        });
+
+    });
+</script>
+
+<script>
+    $('#send2').click(function(e) {
+        e.preventDefault();
+        var name = $("#name").val();
+
+        var data = {
+            name: name,
+        }
+
+        $.ajax({
+            method: 'post',
+            url: '/chats/groups/create',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: JSON.stringify(data)
+        }).done(function (result) {
+            console.log(result);
+        });
+
+    });
+</script>
+
+<script>
+    $('#send3').click(function(e) {
+        e.preventDefault();
+        var email = $("#email").val();
+        var group = $("#group").val();
+
+        var data = {
+            email: email,
+            group: group,
+        }
+
+        $.ajax({
+            method: 'post',
+            url: '/chats/groups/add',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: JSON.stringify(data)
+        }).done(function (result) {
+            console.log(result);
+        });
+
+    });
+</script>
+
+</body>
+</html>

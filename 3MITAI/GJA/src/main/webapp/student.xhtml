@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js" integrity="sha512-m2PhLxj2N91eYrIGU2cmIu2d0SkaE4A14bCjVb9zykvp6WtsdriFCiXQ/8Hdj0kssUB/Nz0dMBcoLsJkSCto0Q==" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/style/css/layout.css" />
+    <title>Nastavení firewall</title>
+</h:head>
+<h:body>
+    <div id="topBar">
+        <a href="${pageContext.request.contextPath}/student.xhtml">Studentský portál</a>
+        <a class="logout-btn" href="${pageContext.request.contextPath}/logout">Odhlásit se</a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s4 student-tables">
+                <h4>Zaregistrovat IP adresu</h4>
+
+                <p:growl id="messages" showDetail="true" />
+
+                <h:form enctype="multipart/form-data">
+                    <p:outputLabel for="ipAddr" value="IP adresa" />
+                    <p:inputText value="#{studentProfileBean.ipAddr}"
+                                 mask="999.999.999.999"
+                                 id="ipAddr"
+                                 validatorMessage="Neplatná IPv4 adresa">
+                        <f:validateRegex pattern="\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b"/>
+                    </p:inputText>
+                    <p:commandButton value="Uložit adresu" ajax="false" action="#{studentProfileBean.addIpAddress}"/>
+                </h:form>
+
+                <h4>Uložené adresy</h4>
+                <p:dataTable var="address" value="#{studentProfileBean.addressList}" style="margin-bottom:40px">
+                    <p:column headerText="IP adresa">
+                        <h:outputText value="#{address}" />
+                    </p:column>
+                </p:dataTable>
+            </div>
+            <div class="col s8 student-tables">
+                <h4>Moje skupiny na projekty</h4>
+                <p:dataTable var="project" value="#{studentProfileBean.projects}" style="margin-bottom:40px">
+                    <p:column headerText="Název skupiny">
+                        <h:outputText value="#{project.name}" />
+                    </p:column>
+
+                    <p:column headerText="Jsem vedoucí">
+                        <h:outputText value="#{project.isLeader ? 'Ano' : 'Ne'}" />
+                    </p:column>
+
+                    <p:column headerText="Projekt odevzdán">
+                        <h:outputText value="#{group.isfinished ? 'Ano' : 'Ne'}" />
+                    </p:column>
+
+                    <p:column headerText="Pracovní složka">
+                        <h:outputText value="#{project.workFolder}" />
+                    </p:column>
+
+                    <p:column headerText="Složka pro odevzdání">
+                        <h:outputText value="#{project.submitFolder}" />
+                    </p:column>
+
+                    <p:column headerText="Akce" >
+                        <h:form>
+                            <h:commandButton rendered="#{project.isLeader}" disabled="#{project.isfinished}" value="Odevzdat" action="#{studentProfileBean.markAsFinished(project.id)}"/>
+                        </h:form>
+                    </p:column>
+                </p:dataTable>
+            </div>
+        </div>
+    </div>
+</h:body>
+</html>

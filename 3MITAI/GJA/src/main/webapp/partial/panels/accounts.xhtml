@@ -1,0 +1,34 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <p:panel id="accounts" header="Studentské účty">
+        <h:form enctype="multipart/form-data">
+            <span class="ui-float-label">
+                <p:inputText value="#{accountManagement.homeDirectoryPrefix}" mode="simple" skinSimple="true"/>
+                <p:outputLabel for="@previous" value="Složka domovských adresářů studentů" />
+            </span>
+            <div class="row">
+                <p:commandButton styleClass="mr-16" value="Vytvořit účty" ajax="false" action="#{accountManagement.createStudentAccounts}"/>
+                <p:commandButton value="Vytvořit složky pro projekty" ajax="false" action="#{accountManagement.groupsAdd}"/>
+            </div>
+            <span class="ui-float-label">
+                <p:inputText value="#{accountManagement.backupDirectoryPrefix}" mode="simple" skinSimple="true"/>
+                <p:outputLabel for="@previous" value="Složka adresářů se zálohy studentů" />
+            </span>
+            <p:commandButton value="Smazat studensté účty a studenty" ajax="false" action="#{accountManagement.deleteStudents}"/>
+            <span class="ui-float-label">
+                <p:inputText value="#{accountManagement.backupGroupDirectoryPrefix}" mode="simple" skinSimple="true"/>
+                <p:outputLabel for="@previous" value="Složka adresářů se zálohy skupin" />
+            </span>
+            <p:commandButton value="Smazat skupiny pro projekty" ajax="false" action="#{accountManagement.groupsDel}"/>
+            <br/>
+            <p:commandButton styleClass="mt-8" value="Odstránit přístup všech studentů" ajax="false" action="#{accountManagement.removeAccess}"/>
+        </h:form>
+    </p:panel>
+
+</ui:composition>
+

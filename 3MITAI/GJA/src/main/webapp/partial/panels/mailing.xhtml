@@ -1,0 +1,42 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <p:panel id="mailing" header="Rozeslaní emailů">
+        <h:form enctype="multipart/form-data">
+            <div class="row row-align-center">
+                <div class="col s4 center">
+                    <p:selectOneMenu value="#{mailer.course}" style="width:125px">
+                        <f:selectItem itemLabel="Zvolte předmět" itemValue="" />
+                        <f:selectItems value="#{courseManagement.courses}" var="course" itemLabel="#{course.name}" itemValue="#{course.id}" />
+                    </p:selectOneMenu>
+                </div>
+                <div class="col s8 center">
+                    <span class="ui-float-label">
+                        <p:inputText value="#{mailer.subject}" />
+                        <p:outputLabel for="@previous" value="Prědmět emailu" />
+                    </span>
+                </div>
+            </div>
+            <p:inputTextarea value="#{mailer.template}" rows="6" cols="33" />
+            <span class="ui-float-label">
+                <p:inputText value="#{mailer.server}" />
+                <p:outputLabel for="@previous" value="Server" />
+            </span>
+            <span class="ui-float-label">
+                <p:inputText value="#{mailer.lectures}" />
+                <p:outputLabel for="@previous" value="Adresář příkladů" />
+            </span>
+            <span class="ui-float-label">
+                <p:inputText value="#{mailer.email}" />
+                <p:outputLabel for="@previous" value="Kontaktní email" />
+            </span>
+            <p:commandButton value="Odeslat informace" ajax="false" action="#{mailer.sendInfo}"/>
+        </h:form>
+    </p:panel>
+
+</ui:composition>
+

@@ -1,0 +1,35 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <p:dataTable var="course" value="#{dashboard.courseList}" rows="10"
+                 paginator="true"
+                 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                 currentPageReportTemplate="{startRecord}-{endRecord} z {totalRecords} předmetů"
+                 paginatorPosition="bottom"
+                 emptyMessage="Nenalezeny žádné záznamy."
+                 style="margin-bottom:40px">
+        <p:column headerText="Id">
+            <h:outputText value="#{course.id}" />
+        </p:column>
+
+        <p:column headerText="Název" >
+            <h:outputText value="#{course.name}" />
+        </p:column>
+
+        <p:column headerText="Adresář pro projekty">
+            <h:outputText value="#{course.groupDirectoryPath}" />
+        </p:column>
+
+        <p:column headerText="Akce">
+            <h:form>
+                <p:commandButton value="Odstránit" ajax="false" action="#{courseManagement.removeCourse(course.id)}"/>
+            </h:form>
+        </p:column>
+    </p:dataTable>
+
+</ui:composition>
+

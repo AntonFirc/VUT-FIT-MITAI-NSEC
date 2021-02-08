@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Demo page</title>
+    <style>
+        .col {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+<h3>Subscribe to user</h3>
+<form target="_blank" class="col-md-6 col" action="/subscribe/user" method="post" enctype="multipart/form-data">
+    <label for="emailuserPost">Email</label>
+    <input type="text" name="email" id="emailUserPost">
+    <label for="pageName">Subscribe to Email</label>
+    <input type="text" name="subscribes" id="pageName">
+    <button id="userPostSubmit">Subscribe to</button>
+</form>
+
+<hr>
+
+<h3>Unsubscribe user</h3>
+<form target="_blank" class="col-md-6 col" action="/unsubscribe/user" method="post" enctype="multipart/form-data">
+    <label for="emailuserPost">Email</label>
+    <input type="text" name="userEmail" id="emailPost">
+    <label for="pageName">Unsubscribe Email</label>
+    <input type="text" name="unsubscribeFromEmail" id="page">
+    <button>Unsubscribe</button>
+</form>
+
+<hr>
+
+<h3>Subscribe to page</h3>
+<form target="_blank" class="col-md-6 col" action="/subscribe/page" method="post" enctype="multipart/form-data">
+    <label for="emailuserPost">Email</label>
+    <input type="text" name="email">
+    <label for="pageName">Subscribe to Id</label>
+    <input type="number" name="subscribes">
+    <button id="userSubmit">Subscribe to</button>
+</form>
+
+<hr>
+
+<h3>Unsubscribe page</h3>
+<form target="_blank" class="col-md-6 col" action="/unsubscribe/page" method="post" enctype="multipart/form-data">
+    <label for="emailuserPost">Email</label>
+    <input type="text" name="email">
+    <label for="pageName">Unsubscribe page id</label>
+    <input type="number" name="pageId">
+    <button>Unsubscribe</button>
+</form>
+
+</body>
+</html>

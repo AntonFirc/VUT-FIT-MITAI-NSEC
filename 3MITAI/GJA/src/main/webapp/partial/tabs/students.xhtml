@@ -1,0 +1,37 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <p:dataTable var="student" value="#{dashboard.studentList}" rows="20"
+                 paginator="true"
+                 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                 currentPageReportTemplate="{startRecord}-{endRecord} z {totalRecords} studentů"
+                 paginatorPosition="bottom"
+                 emptyMessage="Nenalezeny žádné záznamy."
+                 style="margin-bottom:40px">
+        <p:column headerText="Jméno a příjmení">
+            <h:outputText value="#{student.name}" />
+        </p:column>
+
+        <p:column headerText="Login">
+            <h:outputText value="#{student.login}" />
+        </p:column>
+
+        <p:column headerText="Heslo">
+            <h:outputText value="#{student.password}" />
+        </p:column>
+
+        <p:column headerText="Zapsané předměty">
+            <h:outputText value="#{student.courses}" />
+        </p:column>
+
+        <p:column headerText="Obdržel email z">
+            <h:outputText value="#{student.receivedInfo}" />
+        </p:column>
+    </p:dataTable>
+
+</ui:composition>
+

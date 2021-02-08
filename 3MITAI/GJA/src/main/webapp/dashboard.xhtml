@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js" integrity="sha512-m2PhLxj2N91eYrIGU2cmIu2d0SkaE4A14bCjVb9zykvp6WtsdriFCiXQ/8Hdj0kssUB/Nz0dMBcoLsJkSCto0Q==" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/style/css/layout.css" />
+    <title>Dashboard</title>
+</h:head>
+<h:body>
+
+    <div id="topBar">
+        <a href="${pageContext.request.contextPath}/dashboard.xhtml">Dashboard</a>
+        <a class="logout-btn" href="${pageContext.request.contextPath}/logout">Odhlásit se</a>
+    </div>
+
+    <p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true" />
+
+    <div class="section">
+        <p:dashboard id="board" model="#{dashboard.model}">
+            <p:ajax event="reorder" listener="#{dashboard.handleReorder}" update="msgs" />
+
+            <ui:include src="partial/panels/courses.xhtml" />
+
+            <ui:include src="partial/panels/students.xhtml" />
+
+            <ui:include src="partial/panels/groups.xhtml" />
+
+            <ui:include src="partial/panels/smtp.xhtml" />
+
+            <ui:include src="partial/panels/mailing.xhtml" />
+
+            <ui:include src="partial/panels/accounts.xhtml" />
+
+        </p:dashboard>
+        <div style="clear:both" />
+    </div>
+
+    <div id="listings" class="section">
+        <h5>Předměty</h5>
+        <ui:include src="partial/tabs/courses.xhtml" />
+
+        <h5>Studenti</h5>
+        <ui:include src="partial/tabs/students.xhtml" />
+
+        <h5>Skupiny na projekty</h5>
+        <ui:include src="partial/tabs/groups.xhtml" />
+    </div>
+</h:body>
+</html>

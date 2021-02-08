@@ -1,0 +1,63 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <p:panel id="smtp" header="SMTP server">
+        <h:form enctype="multipart/form-data">
+            <div class="row">
+                <div class="col s6">
+                            <span class="ui-float-label">
+                                <p:inputText value="#{SMTP.from}" mode="simple" skinSimple="true"/>
+                                <p:outputLabel for="@previous" value="Odesílatel" />
+                            </span>
+                </div>
+                <div class="col s6">
+                            <span class="ui-float-label">
+                                <p:inputText value="#{SMTP.host}" mode="simple" skinSimple="true"/>
+                                <p:outputLabel for="@previous" value="Host" />
+                            </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6">
+                            <span class="ui-float-label">
+                                <p:inputText value="#{SMTP.username}" mode="simple" skinSimple="true"/>
+                                <p:outputLabel for="@previous" value="Uživatelské jméno" />
+                            </span>
+                </div>
+                <div class="col s6">
+                            <span class="ui-float-label">
+                                <p:password value="#{SMTP.password}" mode="simple" skinSimple="true"/>
+                                <p:outputLabel for="@previous" value="Heslo" />
+                            </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4">
+                             <span class="ui-float-label">
+                                <p:inputNumber value="#{SMTP.port}" mode="simple" skinSimple="true"/>
+                                <p:outputLabel for="@previous" value="Port" />
+                            </span>
+                </div>
+                <div class="col s4">
+                            <span class="ui-float-label label-col">
+                                <h:outputText value="SSL" />
+                                <p:toggleSwitch value="#{SMTP.ssl}" />
+                            </span>
+                </div>
+                <div class="col s4">
+                            <span class="ui-float-label label-col">
+                                <h:outputText value="Autentifikace" />
+                                <p:toggleSwitch value="#{SMTP.auth}" />
+                            </span>
+                </div>
+            </div>
+            <p:commandButton value="Uložit nastavení" ajax="false" action="#{SMTP.saveSMTP}"/>
+        </h:form>
+    </p:panel>
+
+</ui:composition>
+

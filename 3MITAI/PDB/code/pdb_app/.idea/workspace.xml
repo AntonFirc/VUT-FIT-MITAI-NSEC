@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cbdfa233-6924-415b-a8b1-a7b80fa5f80a" name="Default Changelist" comment="Add: rename photo endpoint params and mapping, add photo deletion" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kmDtoxrcFFkmoyoLzzwBY8tPHB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/vut/fit/pdb2020/database/cassandra/service" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.vut.fit.pdb2020.database.dto" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.vut.fit.pdb2020" />
+      <recent name="com.vut.fit.pdb2020.utils" />
+      <recent name="com.vut.fit.pdb2020.database.cassandra.repository" />
+      <recent name="com.vut.fit.pdb2020.database.mariaDB.domain" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/vut/fit/pdb2020/database/cassandra/service" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/vut/fit/pdb2020/database/mariaDB/service" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UserTests">
+    <configuration name="ChatTests and 4 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pdb2020" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="com.vut.fit.pdb2020.ChatTests" />
+        <pattern testClass="com.vut.fit.pdb2020.PageTests" />
+        <pattern testClass="com.vut.fit.pdb2020.PostTests" />
+        <pattern testClass="com.vut.fit.pdb2020.SubscriptionTests" />
+        <pattern testClass="com.vut.fit.pdb2020.UserTests" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PageTests and 3 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pdb2020" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="com.vut.fit.pdb2020.PageTests" />
+        <pattern testClass="com.vut.fit.pdb2020.PostTests" />
+        <pattern testClass="com.vut.fit.pdb2020.SubscriptionTests" />
+        <pattern testClass="com.vut.fit.pdb2020.UserTests" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PageTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pdb2020" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vut.fit.pdb2020.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vut.fit.pdb2020" />
+      <option name="MAIN_CLASS_NAME" value="com.vut.fit.pdb2020.PageTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SubscriptionTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pdb2020" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vut.fit.pdb2020.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vut.fit.pdb2020" />
+      <option name="MAIN_CLASS_NAME" value="com.vut.fit.pdb2020.SubscriptionTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pdb2020" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vut.fit.pdb2020.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vut.fit.pdb2020" />
+      <option name="MAIN_CLASS_NAME" value="com.vut.fit.pdb2020.UserTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pdb2020" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vut.fit.pdb2020.App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserTests" />
+        <item itemvalue="JUnit.ChatTests and 4 more" />
+        <item itemvalue="JUnit.SubscriptionTests" />
+        <item itemvalue="JUnit.PageTests and 3 more" />
+        <item itemvalue="JUnit.PageTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cbdfa233-6924-415b-a8b1-a7b80fa5f80a" name="Default Changelist" comment="" />
+      <created>1606297091698</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606297091698</updated>
+      <workItem from="1606297092922" duration="832000" />
+      <workItem from="1607085216428" duration="8010000" />
+      <workItem from="1607095894378" duration="312000" />
+      <workItem from="1607096342699" duration="8356000" />
+      <workItem from="1607166476468" duration="9623000" />
+      <workItem from="1607326287075" duration="186000" />
+      <workItem from="1607417751293" duration="1639000" />
+      <workItem from="1607442409449" duration="461000" />
+      <workItem from="1607530764779" duration="12519000" />
+      <workItem from="1607545148311" duration="13976000" />
+      <workItem from="1607609053790" duration="11624000" />
+      <workItem from="1607621140763" duration="11233000" />
+      <workItem from="1607679872719" duration="11212000" />
+      <workItem from="1607698035938" duration="12405000" />
+      <workItem from="1607710889462" duration="15089000" />
+      <workItem from="1607778204128" duration="3704000" />
+      <workItem from="1607782242184" duration="28700000" />
+      <workItem from="1607871910459" duration="15124000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added subscriptions, user wall, subscriptions listing, deletion needs to be fixed (naming problem)">
+      <created>1607160209864</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607160209865</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Subscriptions working">
+      <created>1607171640548</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607171640548</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixed just CQL queries">
+      <created>1607171965608</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607171965608</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fix: deleting posts and time precision mismatch">
+      <created>1607173598797</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607173598797</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix: user profile link and url mismatch">
+      <created>1607175385463</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607175385464</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add: comments for user likes and aggregation">
+      <created>1607545623046</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607545623046</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added event sourcing with apache kafka, likes working, need to show them">
+      <created>1607613492084</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607613492084</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Show post likes">
+      <created>1607615332766</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607615332773</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Working page post likes">
+      <created>1607616354020</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607616354021</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added event sourcing for posts">
+      <created>1607619346090</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607619346090</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Create post comment">
+      <created>1607624080150</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1607624080150</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add: post comments">
+      <created>1607624714834</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1607624714834</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Comment like create in SQL">
+      <created>1607627229455</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607627229455</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add and remove comment like">
+      <created>1607678570638</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1607678570639</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add: created test template to work with later">
+      <created>1607686715970</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1607686715972</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add: state management">
+      <created>1607695245400</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1607695245401</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Refactor: user controller">
+      <created>1607698519018</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1607698519018</updated>
+    </task>
+    <task id="LOCAL-00018" summary="refactor">
+      <created>1607698856185</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1607698856185</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add: create tests for user controller">
+      <created>1607704521015</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1607704521017</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add: create tests for user controller">
+      <created>1607704817116</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1607704817116</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Refactor: split subscription controller and event source it">
+      <created>1607712480278</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1607712480278</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Refactor: subscriptions + tests">
+      <created>1607776013743</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1607776013744</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add: rename photo endpoint params and mapping, add photo deletion">
+      <created>1607793607489</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1607793607489</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Add: rename photo endpoint params and mapping, add photo deletion">
+      <created>1607797091683</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1607797091683</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Refactored cassandra creation script">
+      <created>1607799393161</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1607799393161</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Add: database scripts, demo data, and added comments to posts">
+      <created>1607802099259</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1607802099259</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add: rename photo endpoint params and mapping, add photo deletion">
+      <created>1607802124430</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1607802124430</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add: database init scripts">
+      <created>1607802892714</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1607802892714</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Fix: insert order in script">
+      <created>1607851593215</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1607851593215</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Fix: fix mariaDB demo script again">
+      <created>1607852360885</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1607852360885</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Modified user listings, finished initialization and demo scripts">
+      <created>1607869056877</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1607869056878</updated>
+    </task>
+    <task id="LOCAL-00032" summary="added user update + password change">
+      <created>1607873288979</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1607873288979</updated>
+    </task>
+    <task id="LOCAL-00033" summary="delete user with event">
+      <created>1607874027008</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1607874027008</updated>
+    </task>
+    <task id="LOCAL-00034" summary="post tests">
+      <created>1607876237749</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1607876237749</updated>
+    </task>
+    <task id="LOCAL-00035" summary="added page test">
+      <created>1607882377835</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1607882377837</updated>
+    </task>
+    <task id="LOCAL-00036" summary="rename method">
+      <created>1607883304351</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1607883304351</updated>
+    </task>
+    <task id="LOCAL-00037" summary="merged">
+      <created>1607884518119</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1607884518119</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Testing fixes">
+      <created>1607890544163</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1607890544163</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create post comment" />
+    <MESSAGE value="Add: post comments" />
+    <MESSAGE value="Comment like create in SQL" />
+    <MESSAGE value="add and remove comment like" />
+    <MESSAGE value="Add: created test template to work with later" />
+    <MESSAGE value="Add: state management" />
+    <MESSAGE value="Refactor: user controller" />
+    <MESSAGE value="refactor" />
+    <MESSAGE value="Add: create tests for user controller" />
+    <MESSAGE value="Refactor: split subscription controller and event source it" />
+    <MESSAGE value="Refactor: subscriptions + tests" />
+    <MESSAGE value="Refactored cassandra creation script" />
+    <MESSAGE value="Add: database scripts, demo data, and added comments to posts" />
+    <MESSAGE value="Add: rename photo endpoint params and mapping, add photo deletion" />
+    <MESSAGE value="Add: database init scripts" />
+    <MESSAGE value="Fix: insert order in script" />
+    <MESSAGE value="Fix: fix mariaDB demo script again" />
+    <MESSAGE value="Modified user listings, finished initialization and demo scripts" />
+    <MESSAGE value="added user update + password change" />
+    <MESSAGE value="delete user with event" />
+    <MESSAGE value="post tests" />
+    <MESSAGE value="added page test" />
+    <MESSAGE value="rename method" />
+    <MESSAGE value="merged" />
+    <MESSAGE value="Testing fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing fixes" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="773" y="250" key="#com.intellij.ide.util.MemberChooser" timestamp="1607887527206">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="773" y="250" key="#com.intellij.ide.util.MemberChooser/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607887527206" />
+    <state x="377" y="78" width="1243" height="855" key="CommitChangelistDialog2" timestamp="1607890543237">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="377" y="78" width="1243" height="855" key="CommitChangelistDialog2/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607890543236" />
+    <state width="1878" height="473" key="GridCell.Tab.0.bottom" timestamp="1607890545797">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="473" key="GridCell.Tab.0.bottom/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607890545797" />
+    <state width="1878" height="473" key="GridCell.Tab.0.bottom/-1440.475.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1607889688930" />
+    <state width="1398" height="395" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607866182408" />
+    <state width="1398" height="314" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1607862841821" />
+    <state width="1878" height="473" key="GridCell.Tab.0.center" timestamp="1607890545783">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="473" key="GridCell.Tab.0.center/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607890545783" />
+    <state width="1878" height="473" key="GridCell.Tab.0.center/-1440.475.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1607889688917" />
+    <state width="1398" height="395" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1607866182404" />
+    <state width="1398" height="314" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1607862841820" />
+    <state width="1878" height="473" key="GridCell.Tab.0.left" timestamp="1607890545773">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="473" key="GridCell.Tab.0.left/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607890545773" />
+    <state width="1878" height="473" key="GridCell.Tab.0.left/-1440.475.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1607889688903" />
+    <state width="1398" height="395" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1607866182395" />
+    <state width="1398" height="314" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1607862841815" />
+    <state width="1878" height="473" key="GridCell.Tab.0.right" timestamp="1607890545789">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="473" key="GridCell.Tab.0.right/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607890545789" />
+    <state width="1878" height="473" key="GridCell.Tab.0.right/-1440.475.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1607889688919" />
+    <state width="1398" height="395" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1607866182404" />
+    <state width="1398" height="314" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1607862841821" />
+    <state width="1878" height="455" key="GridCell.Tab.1.bottom" timestamp="1607890372110">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="455" key="GridCell.Tab.1.bottom/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607890372110" />
+    <state width="1878" height="455" key="GridCell.Tab.1.bottom/-1440.475.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1607889409694" />
+    <state width="1398" height="314" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607864126489" />
+    <state width="1878" height="455" key="GridCell.Tab.1.center" timestamp="1607890372101">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="455" key="GridCell.Tab.1.center/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607890372101" />
+    <state width="1878" height="455" key="GridCell.Tab.1.center/-1440.475.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1607889409693" />
+    <state width="1398" height="314" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1607864126488" />
+    <state width="1878" height="455" key="GridCell.Tab.1.left" timestamp="1607890372094">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="455" key="GridCell.Tab.1.left/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607890372094" />
+    <state width="1878" height="455" key="GridCell.Tab.1.left/-1440.475.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1607889409687" />
+    <state width="1398" height="314" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1607864126487" />
+    <state width="1878" height="455" key="GridCell.Tab.1.right" timestamp="1607890372108">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="455" key="GridCell.Tab.1.right/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607890372108" />
+    <state width="1878" height="455" key="GridCell.Tab.1.right/-1440.475.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1607889409694" />
+    <state width="1398" height="314" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1607864126488" />
+    <state width="1878" height="455" key="GridCell.Tab.2.bottom" timestamp="1607890315860">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="455" key="GridCell.Tab.2.bottom/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607890315860" />
+    <state width="1878" height="455" key="GridCell.Tab.2.bottom/-1440.475.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1607889370713" />
+    <state width="1878" height="455" key="GridCell.Tab.2.center" timestamp="1607890315859">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="455" key="GridCell.Tab.2.center/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607890315859" />
+    <state width="1878" height="455" key="GridCell.Tab.2.center/-1440.475.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1607889370712" />
+    <state width="1878" height="455" key="GridCell.Tab.2.left" timestamp="1607890315858">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="455" key="GridCell.Tab.2.left/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607890315858" />
+    <state width="1878" height="455" key="GridCell.Tab.2.left/-1440.475.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1607889370712" />
+    <state width="1878" height="455" key="GridCell.Tab.2.right" timestamp="1607890315860">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="455" key="GridCell.Tab.2.right/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607890315860" />
+    <state width="1878" height="455" key="GridCell.Tab.2.right/-1440.475.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1607889370713" />
+    <state x="68" y="33" width="1738" height="933" key="MergeDialog" timestamp="1607883569242">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="68" y="33" width="1738" height="933" key="MergeDialog/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607883569242" />
+    <state x="600" y="245" key="MultipleFileMergeDialog" timestamp="1607883569289">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="600" y="245" key="MultipleFileMergeDialog/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607883569289" />
+    <state width="960" height="540" key="XDebugger.FullValuePopup" timestamp="1607875373699">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state width="960" height="540" key="XDebugger.FullValuePopup/-1440.475.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1607875373699" />
+    <state x="659" y="266" width="602" height="548" key="find.popup" timestamp="1607873768565">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="659" y="266" width="602" height="548" key="find.popup/-1440.450.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1607873768565" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vut/fit/pdb2020/utils/UserPostLike.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vut/fit/pdb2020/database/cassandra/service/CommentLikeServiceEventHandler.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vut/fit/pdb2020/database/mariaDB/service/CommentLikeService.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vut/fit/pdb2020/controller/query/SubscriptionQueryController.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vut/fit/pdb2020/controller/command/UserCommandController.java</url>
+          <line>170</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

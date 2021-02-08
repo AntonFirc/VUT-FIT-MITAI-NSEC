@@ -1,0 +1,23 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <p:panel id="courses" header="Předměty">
+        <h:form enctype="multipart/form-data">
+                        <span class="ui-float-label">
+                            <p:inputText value="#{courseManagement.name}" mode="simple" skinSimple="true"/>
+                            <p:outputLabel for="@previous" value="Název kurzu" />
+                        </span>
+            <span class="ui-float-label">
+                            <p:inputText value="#{courseManagement.groupDirectoryPath}" mode="simple" skinSimple="true"/>
+                            <p:outputLabel for="@previous" value="Složka pro projekty" />
+                        </span>
+            <p:commandButton value="Vytvořit předmět" ajax="false" action="#{courseManagement.addCourse}"/>
+        </h:form>
+    </p:panel>
+
+</ui:composition>
+

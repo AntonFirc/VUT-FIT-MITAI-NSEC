@@ -1,0 +1,59 @@
+.ui-tabmenu-nav {
+  @include bluePrimaryOpacity(background, 0.05);
+  border-radius: 0;
+  border: none;
+  border-top: 1px solid $bluePrimary;
+  padding: 4px 32px 0 32px !important;
+
+  .ui-tabmenuitem {
+    border-radius: 0;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    @include bluePrimaryOpacity(background, 0.1);
+    border: 1px solid $bluePrimary;
+    margin-right: 8px !important;
+    box-shadow: none;
+
+    &.ui-state-active {
+      @include bluePrimaryOpacity(background, 0.4);
+    }
+  }
+}
+
+#listings, .student-tables {
+
+  table[role=grid] {
+    thead {
+      tr {
+        th {
+          @include bluePrimaryOpacity(background, 0.2);
+          box-shadow: none;
+          border: 1px solid $bluePrimary;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td{
+          box-shadow: none;
+          border: 1px solid $bluePrimary;
+        }
+
+        &.ui-datatable-even {
+          @include bluePrimaryOpacity(background-color, 0.02);
+        }
+
+        &.ui-datatable-odd {
+          @include bluePrimaryOpacity(background-color, 0.08);
+        }
+      }
+    }
+  }
+
+  .ui-paginator {
+    @include bluePrimaryOpacity(background, 0.2);
+    box-shadow: none;
+    border: 1px solid $bluePrimary;
+  }
+
+}

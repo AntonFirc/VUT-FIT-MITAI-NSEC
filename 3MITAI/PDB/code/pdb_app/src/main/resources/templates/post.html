@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Demo page</title>
+    <style>
+        .col {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+<h3>User post</h3>
+<form target="_blank" class="col-md-6 col" id="userPostCreate" action="/user/post/create" method="post" enctype="multipart/form-data">
+    <label for="emailuserPost">Email</label>
+    <input type="text" name="email" id="emailUserPost">
+    <label for="pageName">Content</label>
+    <input type="textarea" name="textContent" id="pageName">
+    <input style="display: none;" type="text" name="contentType" value="text">
+    <button id="userPostSubmit">Create post</button>
+</form>
+
+<hr>
+
+<h3>Delete user post</h3>
+<form target="_blank" class="col-md-6 col" id="userPostDelete" action="/user/post/delete" method="post" enctype="multipart/form-data">
+    <label for="emailuserPost">Email</label>
+    <input type="text" name="email">
+    <label for="pageName">Content Type</label>
+    <input type="text" name="contentType" value="text">
+    <label>Created At</label>
+    <input type="text" name="createdAt">
+    <button>Delete post</button>
+</form>
+
+<hr>
+
+<h3>Page post</h3>
+<form target="_blank" class="col-md-6 col" id="pagePostCreate" action="/page/post/create" method="post" enctype="multipart/form-data">
+    <label for="emailuserPost">PageId</label>
+    <input type="number" name="pageId" id="idPagePost">
+    <label for="pageName">Content</label>
+    <input type="textarea" name="textContent" id="pageContent">
+    <input style="display: none;" type="text" name="contentType" value="text">
+    <button id="pagePostSubmit">Create post</button>
+</form>
+
+<hr>
+
+<h3>Delete page post</h3>
+<form target="_blank" class="col-md-6 col" id="pagePostDelete" action="/page/post/delete" method="post" enctype="multipart/form-data">
+    <label>Page Id</label>
+    <input type="number" name="pageId">
+    <label for="pageName">Content Type</label>
+    <input type="text" name="contentType" value="text">
+    <label>Created At</label>
+    <input type="text" name="createdAt">
+    <button>Delete post</button>
+</form>
+
+<hr>
+
+<h3>Like post</h3>
+<form target="_blank" class="col-md-6 col" action="/post/like" method="post" enctype="multipart/form-data">
+    <label>Who likes</label>
+    <input type="text" name="likeGiverMail" >
+    <label for="emailuserPost">Page ID</label>
+    <input type="text" name="pageId" >
+    <label for="emailuserPost">User mail</label>
+    <input type="text" name="userMail">
+    <label for="pageName">Content type</label>
+    <input type="textarea" name="contentType">
+    <label>Created at</label>
+    <input type="text" name="createdAt">
+    <button id="like">Like</button>
+</form>
+
+<hr>
+
+<h3>Comment post</h3>
+<form target="_blank" class="col-md-6 col" action="/post/comment" method="post" enctype="multipart/form-data">
+    <label>Who comments</label>
+    <input type="text" name="commentGiverMail" >
+    <label>Comment</label>
+    <input type="text" name="content" >
+    <label for="emailuserPost">Page ID</label>
+    <input type="text" name="pageId" >
+    <label for="emailuserPost">User mail</label>
+    <input type="text" name="userMail">
+    <label for="pageName">Content type</label>
+    <input type="textarea" name="contentType">
+    <label>Created at</label>
+    <input type="text" name="createdAt">
+    <button id="comment">Comment</button>
+</form>
+
+<hr>
+
+<h3>Comment delete</h3>
+<form target="_blank" class="col-md-6 col" action="/post/comment" method="post" enctype="multipart/form-data">
+    <label>Who commented</label>
+    <input type="text" name="commentGiverMail" >
+    <input style="display: none" type="text" name="content" >
+    <label for="emailuserPost">Page ID</label>
+    <input type="text" name="pageId" >
+    <label for="emailuserPost">User mail</label>
+    <input type="text" name="userMail">
+    <label for="pageName">Content type</label>
+    <input type="textarea" name="contentType">
+    <label>Created at</label>
+    <input type="text" name="createdAt">
+    <button id="commentDelete">Comment delete</button>
+</form>
+
+<hr>
+
+<h3>Comment like</h3>
+<form target="_blank" class="col-md-6 col" action="/comment/like" method="post" enctype="multipart/form-data">
+    <label>Who likes</label>
+    <input type="text" name="likeGiverMail" >
+    <label for="emailuserPost">Comment ID</label>
+    <input type="text" name="commentId" >
+    <label for="emailuserPost">Comment owner mail</label>
+    <input type="text" name="commentUserEmail">
+    <label for="emailuserPost">Page ID</label>
+    <input type="text" name="postPageId" >
+    <label for="emailuserPost">User mail</label>
+    <input type="text" name="postUserMail">
+    <label for="pageName">Content type</label>
+    <input type="textarea" name="contentType">
+    <label>Created at</label>
+    <input type="text" name="createdAt">
+    <button id="commentLike">Comment delete</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+@import "varaibles";
+@import "mixins";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+span {
+  font-family: 'Roboto', sans-serif !important;
+  text-shadow: none !important;
+}
+
+.section {
+  margin: 0 12px 0 16px;
+}
+
+.container {
+  max-width: 1900px;
+  width: 100%;
+}
+
+#topBar {
+  width: 100vw;
+  height: 64px;
+  padding: 8px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $bluePrimary;
+  @include bluePrimaryOpacity(background, 0.1);
+  -webkit-box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.15);
+
+  .logout-btn {
+    text-transform: none;
+    font-size: 15px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  a {
+    color: $bluePrimary;
+    text-transform: uppercase;
+    font-size: 30px;
+    transition: .5s;
+
+    &:hover {
+      text-decoration: none;
+      @include bluePrimaryOpacity(color, 0.7);
+    }
+
+  }
+}
+
+.ui-dashboard-column {
+  width: 33%;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.ui-panel {
+  border-radius: 0;
+  border: 1px solid $bluePrimary;
+  margin-bottom: 16px;
+}
+
+.ui-panel .ui-panel-titlebar {
+  border: 1px solid rgba(0, 169, 224, 0.4);
+  @include bluePrimaryOpacity(background, 0.1);
+  border-radius: 0;
+}
+
+
+
+.ui-button.ui-state-default {
+  background: white;
+  border: 1px solid rgba(0, 169, 224, 0.3);
+  border-radius: 0;
+  color: #333;
+  transition: .5s;
+  font-weight: 100;
+
+  &:hover {
+    @include bluePrimaryOpacity(background, 0.05);
+  }
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid $bluePrimary;
+  -webkit-box-shadow: 0 1px 0 0 $bluePrimary;
+  box-shadow: 0 1px 0 0 $bluePrimary;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly])+label {
+  color: $bluePrimary;
+}
+
+.ui-float-label {
+  margin-top: 16px;
+}
+
+.ui-toggleswitch {
+  position: relative;
+  display: inline-block;
+  width: 53px;
+  height: 28px;
+
+  &-checked {
+    .ui-toggleswitch-slider {
+      background-color: $bluePrimary;
+    }
+  }
+}
+
+.ui-toggleswitch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.ui-toggleswitch-slider:before {
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 26px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.label-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mr-16 {
+  margin-right: 16px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.row-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.loginFormHolder {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ui-widget-content {
+    border: none;
+  }
+
+  .error {
+    color: red;
+    font-size: 13px;
+  }
+
+  .ui-panelgrid-cell {
+    text-align: center;
+  }
+}
+
+.float-right {
+  float: right;
+}
+
+@import "tabs";

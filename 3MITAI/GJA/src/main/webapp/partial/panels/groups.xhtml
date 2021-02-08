@@ -1,0 +1,28 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <p:panel id="groups" header="Skupiny na projekty">
+        <h:form enctype="multipart/form-data">
+            <div class="row flex-row">
+                <div class="col s6 center">
+                    <p:selectOneMenu styleClass="input-custom" value="#{importHandlerBean.groupCourse}" style="width:125px">
+                        <f:selectItem itemLabel="Zvolte předmět" itemValue="" />
+                        <f:selectItems value="#{courseManagement.courses}" var="course" itemLabel="#{course.name}" itemValue="#{course.id}" />
+                    </p:selectOneMenu>
+                </div>
+                <div class="col s6 center">
+                    <p:fileUpload label="Vybrat soubor" value="#{importHandlerBean.groups}" mode="simple" skinSimple="true"/>
+                </div>
+            </div>
+            <div class="row flex-center">
+                <p:commandButton value="Importovat skupiny na projekty" ajax="false" action="#{importHandlerBean.importHtmlGroups}"/>
+            </div>
+        </h:form>
+    </p:panel>
+
+</ui:composition>
+

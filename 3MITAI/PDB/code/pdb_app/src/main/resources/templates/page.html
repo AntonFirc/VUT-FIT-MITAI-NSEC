@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Demo page</title>
+    <style>
+        .col {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+
+<form target="_blank" class="col-md-6 col" id="pageCreate" action="/page/create" method="post" enctype="multipart/form-data">
+    <label for="emailuserPage">Email</label>
+    <input type="text" name="email" id="emailuserPage">
+    <label for="pageName">Name</label>
+    <input type="text" name="name" id="pageName">
+    <button id="userPicRemove">Create page</button>
+</form>
+
+<form target="_blank" class="col-md-6 col" id="deletePage" action="/page/delete" method="post" enctype="multipart/form-data">
+    <label for="emailuserPage">Id</label>
+    <input type="number" name="id" id="pageId">
+    <button id="deletePageBtn">Delete page</button>
+</form>
+
+<form target="_blank" class="col-md-6 col" id="pageProfilePic" action="/page/profilePic" method="post" enctype="multipart/form-data">
+    <label>Id</label>
+    <input type="number" name="id">
+    <input type="file" name="file" id="profilePic">
+
+    <button id="userPicSubmit">Add photo</button>
+</form>
+
+<form target="_blank" class="col-md-6 col" id="pageDeletePic" action="/page/profilePic/delete" method="post" enctype="multipart/form-data">
+    <label >Id</label>
+    <input type="number" name="id">
+
+    <button id="removePic">Remove photo</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <p:dataTable var="group" value="#{dashboard.groupList}" rows="10"
+                 paginator="true"
+                 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                 currentPageReportTemplate="{startRecord}-{endRecord} z {totalRecords} skupin"
+                 paginatorPosition="bottom"
+                 emptyMessage="Nenalezeny žádné záznamy."
+                 style="margin-bottom:40px">
+        <p:column headerText="Název skupiny">
+            <h:outputText value="#{group.name}" />
+        </p:column>
+
+        <p:column headerText="Vedoucí">
+            <h:outputText value="#{group.leaderLogin}" />
+        </p:column>
+
+        <p:column headerText="Členové">
+            <h:outputText value="#{group.memberLogins}" />
+        </p:column>
+
+        <p:column headerText="Projekt odevzdán">
+            <h:outputText value="#{group.projectFinished ? 'Ano' : 'Ne'}" />
+            <h:form styleClass="float-right" rendered="#{group.projectFinished}">
+                <h:commandButton value="Zrušit odevzdání" action="#{studentProfileBean.undo(group.id)}"/>
+            </h:form>
+        </p:column>
+
+        <p:column headerText="OS skupina">
+            <h:outputText value="#{group.osGroupName}" />
+        </p:column>
+
+        <p:column headerText="Pracovní složka">
+            <h:outputText value="#{group.workDirectory}" />
+        </p:column>
+
+        <p:column headerText="Složka pro odevzdaní">
+            <h:outputText value="#{group.submitDirectory}" />
+        </p:column>
+
+    </p:dataTable>
+
+</ui:composition>
+
