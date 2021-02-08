@@ -25,7 +25,7 @@ My school projects repository. Cybersecurity FIT VUT.
   - Projekt 1 (Odd-Event Transposition sort) - 8/10
   - Projekt 2 (Visibility algorimus) - 8/10
   
-  ## 3MITAI - Tretí semester
+## 3MITAI - Tretí semester
 - AIS
   - Projekt (internetový obchod) - 20/29
 - GJA
