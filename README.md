@@ -27,9 +27,9 @@ My school projects repository. Cybersecurity FIT VUT.
   
   ## 3MITAI - Tretí semester
 - AIS
-  - Projekt - 20/29
+  - Projekt (internetový obchod) - 20/29
 - GJA
-  - Projekt - 36/39
+  - Projekt (nástroj pre správu výukového serveru) - 36/39
 - PDB
   - Projekt (sociálna sieť) - 5/5 + 20/20
 - ZZN
