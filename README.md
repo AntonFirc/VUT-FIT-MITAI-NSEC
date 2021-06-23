@@ -34,3 +34,10 @@ My school projects repository. Cybersecurity FIT VUT.
   - Projekt (sociálna sieť) - 5/5 + 20/20
 - ZZN
   - Projekt (databáze z výskumu konzumace alkoholu) - 5/5 + 29/29
+
+## 4MITAI - Štvrtý semester
+- BZA
+  - Projekt (Bluetooth Impersonation AttackS) - 30/30
+- SUR
+  - Domáca úloha (náhrada polsemestrálnej skúšky) - 12.5/15
+  - Projekt (https://github.com/AntonFirc/SUR) - 25/25
